@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Дек 06 2019 г., 17:24
--- Версия сервера: 10.4.8-MariaDB
--- Версия PHP: 7.3.10
+-- Время создания: Дек 12 2019 г., 18:18
+-- Версия сервера: 10.4.6-MariaDB
+-- Версия PHP: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -43,7 +43,9 @@ CREATE TABLE `clients` (
 
 INSERT INTO `clients` (`id`, `Name`, `Surname`, `Phonenumber`, `email`, `datetime`) VALUES
 (6, 'Zarina', 'Abdulliyeva', 87781062430, 'abdullievzar@gmail.com', '2222-02-22 11:22:00'),
-(8, 'Karina', 'Bulatova', 87774183402, 'karin@gmail.com', '2019-10-16 12:00:00');
+(8, 'Karina', 'Bulatova', 87774183402, 'karin@gmail.com', '2019-10-16 12:00:00'),
+(9, 'Fazyl', 'Yelaman', 87752698182, 'fazil.el2003@gmail.com', '2003-08-10 20:20:00'),
+(10, 'Fazyl', 'Yelaman', 87752698182, 'fazil.el2003@gmail.com', '2003-08-10 00:05:00');
 
 -- --------------------------------------------------------
 
@@ -55,15 +57,17 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `created_at` datetime DEFAULT current_timestamp()
+  `created_at` datetime DEFAULT current_timestamp(),
+  `admin` tinyint(4) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Дамп данных таблицы `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `password`, `created_at`) VALUES
-(5, 'zarina', '$2y$10$TVCs90Hh9MMnMEOV/uKrxeKQBNwFHe4/UCFvHBX0uqLxJZrzJT05C', '2019-10-14 19:04:31');
+INSERT INTO `users` (`id`, `username`, `password`, `created_at`, `admin`) VALUES
+(5, 'zarina', '$2y$10$TVCs90Hh9MMnMEOV/uKrxeKQBNwFHe4/UCFvHBX0uqLxJZrzJT05C', '2019-10-14 19:04:31', NULL),
+(7, 'admin', '$2y$10$ZurOPnYabRJMYXQLlEX3Du9q6M811xGI189oRTh9gVVMcqc48NKnu', '2019-12-10 22:02:57', 1);
 
 --
 -- Индексы сохранённых таблиц
@@ -90,13 +94,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
