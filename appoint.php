@@ -25,8 +25,8 @@ session_start();
         margin: 0; 
     }
 </style>
-<link rel="stylesheet" type="datetime-local" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link rel="stylesheet" type="datetime-local" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
 <style>
     input[type=datetime-local], select {
         width: 50%;
@@ -81,8 +81,11 @@ session_start();
          <input type="submit" style="font-size:24px;font-family:palatino;width:50%;margin-left:270px;background-color:#00cca3" class="btn btn-primary" value="Submit">
 		 </form>
       </div>
-   </div>
+    </div>
+    <div class="col-4">
+        <h2><a href="index.php">Вернуться на главную страницу</a></h2>
+     </div>
+
 </div>
-		
 </body>
 </html>
