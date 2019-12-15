@@ -11,7 +11,7 @@ if (isset($_POST['phone'])) { $phone=$_POST['phone']; if ($phone =='') { unset($
 
 if (empty($Name) or empty($Surname)or empty($email)or empty($datetime)or empty($phone)) //если пользователь не ввел f_Name или product, то выдаем ошибку и останавливаем скрипт
 {
-exit ("Вы ввели не всю информацию, венитесь назад иvnnvnvgngngvn заполните все поля!");
+exit ("Вы ввели не всю информацию, венитесь назад и заполните все поля!");
 
 
 }
